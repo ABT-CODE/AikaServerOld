@@ -1,0 +1,39 @@
+unit Objects;
+
+interface
+
+uses
+  Windows, SysUtils, MiscData,BaseMob;
+
+{$OLDTYPELAYOUT ON}
+
+{$REGION 'OBJECTS Threads'}
+
+{$ENDREGION}
+
+{$REGION 'Objects Data'}
+type
+  POBJ = ^TOBJ;
+
+  TOBJ = record
+    Index: WORD;
+    Position: TPosition;
+    ContentType: Byte;
+    ContentAmount: WORD; //quantidade de itens depois de coletar
+    ContentItemID: WORD;
+    ContentCollectTime: WORD; //in seconds
+    ReSpawn: Boolean;
+    CreateTime: TDateTime;
+    Face: WORD;
+    Weapon: WORD;
+    NameID: WORD;
+    BuffID:Tbasemob;
+    BuffIDs:word;
+
+  end;
+{$ENDREGION}
+
+{$OLDTYPELAYOUT OFF}
+implementation
+
+end.
